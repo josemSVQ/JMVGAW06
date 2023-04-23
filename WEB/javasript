@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>javascript.html</title>
+  <script>
+    window.onload = function() {
+      alert("Bienvenido a la web dinámica");
+    }
+  </script>
+</head>
+<body>
+  <h1>Bienvenido a la página de JavaScript</h1>
+  <!-- Contenido de la página -->
+</body>
+</html>

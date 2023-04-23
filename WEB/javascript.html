@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-10">
+  <meta name="author" content="jose miguel velasco gonzalez">
+  <meta name="description" content="Sitio web sobre gestores de contenido">
+  <meta name="keywords" content="CMS, Gestor de contenidos, Joomla, Wordpress">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>valasco_JavaScript</title>
+  <link rel="shortcut icon" href="Recursos/JavaScript.png" type="image/png">
+  <script type="text/javascript">
+    window.onload = function() {
+      alert("Bienvenido a la web dinámica");
+    }
+
+    function showCMSIcon() {
+      var name = prompt("Por favor, introduce tu nombre:");
+      var cmsNumber = prompt("Introduce el número de tu CMS favorito (1-8):\n1. WordPress\n2. Joomla\n3. Drupal\n4. Magento\n5. Shopify\n6. PrestaShop\n7. Wix\n8. Ghost");
+      var cmsName;
+      var cmsIconId;
+      var cmsIconElement;
+
+      switch (cmsNumber) {
+        case '1':
+          cmsName = 'WordPress';
+          cmsIconId = 'cms-icon-1';
+          break;
+        case '2':
+          cmsName = 'Joomla';
+          cmsIconId = 'cms-icon-2';
+          break;
+        case '3':
+          cmsName = 'Drupal';
+          cmsIconId = 'cms-icon-3';
+          break;
+        case '4':
+          cmsName = 'Magento';
+          cmsIconId = 'cms-icon-4';
+          break;
+        case '5':
+          cmsName = 'Shopify';
+          cmsIconId = 'cms-icon-5';
+          break;
+        case '6':
+          cmsName = 'PrestaShop';
+          cmsIconId = 'cms-icon-6';
+          break;
+        case '7':
+          cmsName = 'Wix';
+          cmsIconId = 'cms-icon-7';
+          break;
+        case '8':
+          cmsName = 'Ghost';
+          cmsIconId = 'cms-icon-8';
+          break;
+        default:
+          cmsName = 'desconocido';
+          break;
+      }
+
+      var message = "Hola " + name + ", ¿quieres ver el icono de " + cmsName + "?";
+      alert(message);
+
+      // Mostrar el icono correspondiente al CMS seleccionado
+      if (cmsNumber >= 1 && cmsNumber <= 8) {
+        cmsIconElement = document.getElementById(cmsIconId);
+        cmsIconElement.style.display = "block";
+        // Mostrar la imagen del CMS
+        var imgSrc = cmsIconElement.getAttribute("src");
+        var imgAlt = cmsIconElement.getAttribute("alt");
+        var imgElement = document.createElement("img");
+        imgElement.src = imgSrc;
+        imgElement.alt = imgAlt;
+        document.body.appendChild(imgElement);
+      }
+    }
+
+    function goToIndex() {
+      window.location.href = "index.html";
+    }
+  </script>
+</head>
+<body>
+  <h1>CMS Favoritos</h1>
+  <ol>
+         <li>WordPress</li>
+         <li>Joomla</li>
+         <li>Drupal</li>
+          <li>Magento</li>
+          <li>Shopify</li>
+          <li>PrestaShop</li>
+          <li>Wix</li>
+          <li>Ghost</li>
+        </ol>
+        <button onclick="showCMSIcon()">Mostrar icono de mi CMS favorito</button>
+        <li><a href="index.html"><img src="Recursos/iconocasa.png" alt="AW06jmvgl" width="100" height="100"></a></li>
+        <button onclick="goToIndex()">Ir a la página principal</button>
+        <img id="cms-icon-1" src="Recursos/WordPress.png" alt="Icono de WordPress" style="display: none;">
+        <img id="cms-icon-2" src="Recursos/Joomla.png" alt="Icono de Joomla" style="display: none;">
+        <img id="cms-icon-3" src="Recursos/Drupal.png" alt="Icono de Drupal" style="display: none;">
+        <img id="cms-icon-4" src="Recursos/Magento.png" alt="Icono de Magento" style="display: none;">
+        <img id="cms-icon-5" src="Recursos/Shopify.png" alt="Icono de Shopify" style="display: none;">
+        <img id="cms-icon-6" src="Recursos/PrestaShop.png" alt="Icono de PrestaShop" style="display: none;">
+        <img id="cms-icon-7" src="Recursos/Wix.png" alt="Icono de Wix" style="display: none;">
+        <img id="cms-icon-8" src="Recursos/Ghost.png" alt="Icono de Ghost" style="display: none;">
+        <script type="text/javascript">
+          window.onload = function() {
+            alert("Bienvenido a la web dinámica");
+          }
+      
+          function showCMSIcon() {
+            var name = prompt("Por favor, introduce tu nombre:");
+            var cmsNumber = prompt("Introduce el número de tu CMS favorito (1-8):\n1. WordPress\n2. Joomla\n3. Drupal\n4. Magento\n5. Shopify\n6. PrestaShop\n7. Wix\n8. Ghost");
+            var cmsName;
+            var cmsIconId;
+            var cmsIconElement;
+      
+            switch (cmsNumber) {
+              case '1':
+                cmsName = 'WordPress';
+                cmsIconId = 'cms-icon-1';
+                break;
+              case '2':
+                cmsName = 'Joomla';
+                cmsIconId = 'cms-icon-2';
+                break;
+              case '3':
+                cmsName = 'Drupal';
+                cmsIconId = 'cms-icon-3';
+                break;
+              case '4':
+                cmsName = 'Magento';
+                cmsIconId = 'cms-icon-4';
+                break;
+              case '5':
+                cmsName = 'Shopify';
+                cmsIconId = 'cms-icon-5';
+                break;
+              case '6':
+                cmsName = 'PrestaShop';
+                cmsIconId = 'cms-icon-6';
+                break;
+              case '7':
+                cmsName = 'Wix';
+                cmsIconId = 'cms-icon-7';
+                break;
+              case '8':
+                cmsName = 'Ghost';
+cmsIconId = 'cms-icon-8';
+break;
+default:
+alert("Número de CMS no válido. Por favor, introduce un número válido del 1 al 8.");
+return;
+}
+cmsIconElement = document.getElementById(cmsIconId);
+  if (cmsIconElement) {
+    cmsIconElement.style.display = "block";
+    alert("¡Hola, " + name + "! Aquí está el icono de tu CMS favorito, " + cmsName + ".");
+  } else {
+    alert("Lo siento, no se pudo encontrar el icono de tu CMS favorito. Por favor, intenta nuevamente.");
+  }
+}
+
+function goToIndex() {
+  location.href = "index.html";
+}
+</script>
+</body>
+</html>
+      

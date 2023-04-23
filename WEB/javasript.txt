@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript CMS</title>
+  <script>
+    function showCMSIcon() {
+      var nombre = prompt("Por favor, introduce tu nombre:");
+      var cms = prompt("Por favor, introduce el número de tu CMS favorito:\n1. WordPress\n2. Joomla\n3. Wix\n4. Squarespace\n5. Shopify\n6. Magento\n7. Ghost\n8. Drupal");
+      
+      switch (cms) {
+        case '1':
+          alert("Hola " + nombre + ", ¿quieres ver el icono de WordPress?");
+          break;
+        case '2':
+          alert("Hola " + nombre + ", ¿quieres ver el icono de Joomla?");
+          break;
+        case '3':
+          alert("Hola " + nombre + ", ¿quieres ver el icono de Wix?");
+          break;
+        case '4':
+          alert("Hola " + nombre + ", ¿quieres ver el icono de Squarespace?");
+          break;
+        case '5':
+          alert("Hola " + nombre + ", ¿quieres ver el icono de Shopify?");
+          break;
+        case '6':
+          alert("Hola " + nombre + ", ¿quieres ver el icono de Magento?");
+          break;
+        case '7':
+          alert("Hola " + nombre + ", ¿quieres ver el icono de Ghost?");
+          break;
+        case '8':
+          alert("Hola " + nombre + ", ¿quieres ver el icono de Drupal?");
+          break;
+        default:
+          alert("El número ingresado no es válido. Por favor, intenta de nuevo.");
+          break;
+      }
+      
+      var cmsIcons = document.getElementsByClassName("cms-icon");
+      for (var i = 0; i < cmsIcons.length; i++) {
+        cmsIcons[i].style.display = "none";
+      }
+      
+      var selectedCMSIcon = document.getElementById("cms-icon-" + cms);
+      selectedCMSIcon.style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <h1>Bienvenido a la web dinámica</h1>
+  <button onclick="showCMSIcon()">Mostrar Icono</button>
+  <div>
+    <p>Elija su CMS favorito:</p>
+    <ol>
+      <li>WordPress</li>
+      <li>Joomla</li>
+      <li>Wix</li>
+      <li>Squarespace</li>
+      <li>Shopify</li>
+      <li>Magento</li>
+      <li>Ghost</li>
+      <li>Drupal</li>
+    </ol>
+    <img class="cms-icon" id="cms-icon-1" src="wordpress.png" alt="WordPress" />
+    <img class="cms-icon" id="cms-icon-2" src="joomla.png" alt="Joomla" />
+    <img class="cms-icon" id="cms-icon-3" src="wix.png" alt="Wix" />
+    <img class="cms-icon" id="cms-icon-4" src="squarespace.png" alt="Squarespace" />
+    <img class="cms-icon" id="cms-icon-5" src="shopify.png" alt="Shopify" />
+    <img class="cms-icon" id="cms-icon-6" src="magento.png" alt="Magento" />
+    <img class="cms-icon" id="cms-icon-7" src="ghost.png" alt="Ghost" />
+    <img class="cms-icon" id="cms-icon-8" src="drupal.png" alt="Drupal" />
+    
+      </div>
+    </body>
+    </html>
